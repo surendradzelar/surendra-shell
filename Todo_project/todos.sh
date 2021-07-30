@@ -13,7 +13,7 @@ fi
 
 USER_NAME=$(whoami)
 
-if [ "${USER_NAME}" != "root"];then
+if [ "${USER_NAME}" != "root"]: then
     ERROR "must be root user to perform the script"
     exit 1
 fi
