@@ -7,7 +7,7 @@ DOMAIN=zssurendra.tk
 OS_PREREQ
 
 Head "installing Nginx"
-apt install naginx -y &>>$LOG
+apt install nginx -y &>>$LOG
 Stat $?
 
 Head"install npm"
@@ -17,11 +17,11 @@ Stat $?
 
 
 Head "create Directory"
-cd /root/surendra/html & >>$LOG
+cd /var/www/html & >>$LOG
 Stat $?
-mkdir project-todo &>>$LOG
+mkdir todo &>>$LOG
 Stat $?
-cd project-todo &>>$LOG
+cd todo &>>$LOG
 Stat $?
 rm -rf frontend &>>$LOG
 Stat $?
@@ -40,8 +40,8 @@ Stat $?
 
 
 Head "Replacing domain names"
-sed -i '32 s/127.0.0.1/login.zssurendra.tk/g' /root/surendra/html/project-todo/frontend/config/index.js
-sed -i '36 s/127.0.0.1/todo.zssurendra.tk/g'  /root/surendra/html/project-todo/frontend/config/index.js
+sed -i '32 s/127.0.0.1/login.zssurendra.tk/g' /var/www/html/todo/frontend/config/index.js
+sed -i '36 s/127.0.0.1/todo.zssurendra.tk/g'  /var/www/html/todo/frontend/config/index.js
 Stat $?
 
 Head "start and restart Nginx"
