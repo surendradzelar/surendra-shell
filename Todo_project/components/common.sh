@@ -10,7 +10,7 @@ Stat() {
         echo -e "\e[1;32mSUCCESS\e[0m"
         else
         echo -e "\e[1;32mFAIL\e[0m"
-        echo -e "\n\e[1;31m logs in the file,log file path=${LOG}\e[0m"
+        echo -e "\n\e[1;33m You can refer log file fore more information, Log file Path = ${LOG}\e[0m"
         exit 1
     fi
 }
