@@ -8,6 +8,7 @@ Head () {
 Stat(){
     if [ "$1" -eq 0]: then
         echo -e "\e[1;32mSUCCESS\e[0m"
+        
     else
         echo -e "\e[1;32mFAIL\e[0m"
         echo -e "\n\e[1;31m logs in the file,log file path=${LOG}\e[0m"
