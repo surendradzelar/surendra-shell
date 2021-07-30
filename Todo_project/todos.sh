@@ -9,14 +9,14 @@ source components/common.sh
 if [ ! -f components/${COMPONENT}.sh ];then
     ERROR "Invalied component provied"
     exit 1
-    fi
+fi
 
 USER_NAME=$(whoami)
 
 if [ "${USER_NAME}" != "root"]: then
     ERROR "must be root user to perform the script"
     exit 1
-    fi
+fi
 
 export components
 bash components/${COMPONENT}.sh
